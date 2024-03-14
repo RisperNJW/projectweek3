@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake of Taste 🎂</title>
+    <style>
+    .container{
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 60px;
+            background: #f6eedf;
+            scroll-behavior: smooth;
+    }
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #d63447;
+      }
+    h2{
+        text-align: center;
+        display: block;
+        background:  #d1cebd;
+        border: 1px solid black;
+        line-height: 50px;
+        padding:10px;
+        font-size: 20px;
+        border-radius:3px;
+
+    }
+    p{
+        text-align: center;
+        line-height: 1.5;
+        font-size: 18px;
+    }
+    img.cake{
+        display: block;
+        margin: 0px auto;
+        height: 100px ;
+        max-width: 100%;
+        border-radius: 20px;
+
+    }
+    .cake-image {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .cake-image img{
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .cake-image img:hover{
+        transform: scale(1.05);
+    }
+    .learn-more{
+        text-decoration: none;
+        color: #d63447;
+      }
+      .learn-more:hover{
+          text-decoration: underline;
+      }
+    .taste-button{
+          display: block;
+          margin: 0 auto;
+          padding: 15px 40px;
+          background:#f57b51;
+          color: white;
+          font-size: 20px;
+          border: none;
+          border-radius: 10px;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+          transition: all 200ms ease-in-out; 
+          cursor: pointer;
+      }
+      .taste-button:hover{
+          opacity: 0.8;
+      }
+      .footer
+      {
+          text-align: center;
+          font-size: 14px;
+      }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dessert of cake taste</h1>
+        <h2>Swiss roll dessert</h2>
+    
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/109/original/exps97901_HC163708C11_03_3b-8.jpg?1710450512" alt="Swiss roll" width="100" class="cake" >
+    
+        <p>
+ A<strong>Swiss roll,</strong> jelly roll (United States), cream roll, or Swiss log is a type of rolled sponge cake. <br> 
+ The Swiss roll cake, though not Swiss in origin, gained fame in 19th century Europe and flourished in the 20th century, thanks to its versatility and widespread appeal.
+ <br> The roll is filled with whipped cream, icing, or try adding a layer of jam, filling it with ice cream or chocolate fudge sauce to make it <em>EXTRA special. </em> 
+<br>
+This easy dessert is great for entertaining and birthday parties. It is a popular dessert in many countries. 
+</p>
+<a href="https://en.wikipedia.org/wiki/Swiss_roll" target="_blank" class="learn-more">Learn more on Wikipedia</a>
+
+<p> 
+<hr>
+<div class="cake-image">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/108/original/wb3_zpsf230e2d8-1.jpg?1710450273" alt="cake-image" width="200">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/107/original/strawberry-cake-roll-FEAT-1200x799.jpg?1710450248" alt="cake-image" width="200">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/119/106/original/chocolate_swiss_roll_main.jpg?1710450229" alt="cake-image" width="200" >
+</div>
+<hr>
+<h3>ABOUT THE SWISS ROLL</h3>
+<p> With its elegantly spiraled layers and often adorned with a dusting of powdered sugar or a drizzle of glaze.
+    The Swiss roll cake is as delightful to behold as it is to taste, making it a favorite canvas for artistic expression. <br>
+
+<strong>Perfect pairing</strong> <br>
+Whether enjoyed alongside a steaming cup of tea for a cozy afternoon treat or
+     showcased as a show-stopping finale to a lavish dinner party, Swiss roll cake is a versatile dessert that complements any occasion. 
+    Its compatibility with accompaniments like ice cream or whipped cream adds an extra layer of indulgence.
+</p>
+
+<button class="taste-button"> 🍰Taste now</button>
+
+<p class="footer">
+This page was built by: Risper Njeri
+</p>
+</div>
+
+<script>
+    function tasteNow() {
+    let name = prompt("What is your name?");
+    let email = prompt("What is your email address?");
+    let emoji = prompt("What is your favourite emoji?");
+
+    if (!email.includes("@")) {
+        alert("Please enter a valid email address 😔");
+        return;
+    }
+    alert(
+        "Thank you " + name + " for visiting our page! We'll get in touch via " + email + ".Your favorite emoji is " + emoji
+    );
+}
+
+let tasteButton = document.querySelector(".taste-button");
+tasteButton.addEventListener("click", tasteNow);
+
+</script>
+</body>
+</html>
